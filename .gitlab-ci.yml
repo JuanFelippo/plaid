@@ -31,6 +31,7 @@ before_script:
 stages:
   - build
   - test
+  - deploy
   
 build:
   stage: build
@@ -43,5 +44,10 @@ build:
 unitTests:
   stage: test
   script:
-    - ./gradlew test 
-
+    - ./gradlew test
+ 
+deploy_job:
+  stage: deploy
+  script:
+    - echo Lib deployed
+  when: manual
