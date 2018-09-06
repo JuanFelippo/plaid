@@ -43,5 +43,5 @@ build:
 unitTests:
   stage: test
   script:
-    - ./gradlew test
+    - ./gradlew test 
 
